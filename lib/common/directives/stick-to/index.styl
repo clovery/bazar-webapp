@@ -1,0 +1,23 @@
+[stick-to]
+  z-index: 5
+
+[stick-to="bottom"] 
+  position: fixed
+  bottom: 0
+  left: 0
+  right: 0
+  padding: 20px
+
+  &.cell, .cell, &.global-bar
+    padding: 0
+
+  .price
+    display: inline-block
+
+  .cell
+    border-bottom: 0
+
+  .clearfix, .btn
+    &.right
+      float: right
+      width: 8em

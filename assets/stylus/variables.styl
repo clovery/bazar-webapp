@@ -1,0 +1,126 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base = #000 // black
+$gray-darker = lighten($gray-base, 13.5%) // #222
+$gray-dark = lighten($gray-base, 20%) // #333
+$gray = lighten($gray-base, 40%) // #666
+$gray-light = lighten($gray-base, 46.7%) // #777
+$gray-lighter = lighten($gray-base, 93.5%) // #eee
+
+$brand-primary = $gray-base
+$brand-success = $global-green
+$brand-info = $global-blue
+$brand-warning = $global-orange-light
+$brand-danger = $global-red-light
+
+$icon-font-path = "../assets/fonts/"
+
+$text-color = $gray-base
+
+//** Text muted color
+$text-muted = #999
+
+$font-family-sans-serif = 'Helvetica Neue', Helvetica, Arial, 'Hiragino Sans GB', 'Microsoft Yahei', 'Apple Color Emoji', 'Segoe UI Emoji', 'NotoColorEmoji', 'Segoe UI Symbol', 'Android Emoji', 'EmojiSymbols', sans-serif
+$font-family-serif = Georgia, 'Times New Roman', Times, Simsun, serif
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace = Menlo, Monaco, Consolas, 'Courier New', monospace
+$font-family-base = $font-family-sans-serif
+
+$font-size-root = 14Px
+$font-size-base = 1em
+$font-size-large = 1.142857143em
+$font-size-small = .857142857em
+
+$font-size-h1 = 1.6666667em // ~40px
+$font-size-h2 = 1.5em // ~36px
+$font-size-h3 = 1.1666667em // ~32px
+$font-size-h4 = 1em
+$font-size-h5 = 1em
+$font-size-h6 = 0.85em // ~24px
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base = 1.4
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed = floor(($font-size-base * $line-height-base)) // ~20px
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$padding-base-vertical = .5em
+$padding-base-horizontal = 1em
+
+$padding-large-vertical = .75em
+$padding-large-horizontal = 1.5em
+
+$padding-small-vertical = .5em
+$padding-small-horizontal = .8em
+
+$padding-xs-vertical = 2.5 / 14 * 1em
+$padding-xs-horizontal = 5 / 14 * 1em
+
+$line-height-large = 1.3333333 // extra decimals for Win 8.1 Chrome
+$line-height-small = 1.5
+
+$border-radius-base = 0
+$border-radius-large = 0
+$border-radius-small = 0
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color = #fff
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg = $brand-primary
+
+//** Width of the `border` for generating carets that indicator dropdowns.
+$caret-width-base = 4Px
+//** Carets increase slightly in size for larger components.
+$caret-width-large = 6Px
+
+$link-color = $brand-info
+
+$grid-gutter-width = 20px
+
+$state-success-text = $brand-success
+$state-success-bg = lighten($brand-success, 30%)
+
+$state-info-text = $brand-info
+$state-info-bg = lighten($brand-info, 30%)
+
+$state-warning-text = $brand-warning
+$state-warning-bg = lighten($brand-warning, 30%)
+
+$state-danger-text = $brand-danger
+$state-danger-bg = lighten($brand-danger, 30%)
+
+$viewportWidth = 640px
+
+$white = #ffffff
+$light-text = #a0a0a0
+$normal-text = #303030
+
+$global-red = #f0534c
+$global-red-light = #f0534c
+$global-green = #00923f
+$global-orange = #db8d3a
+$global-orange-light = #ffc160
+$global-blue = #007aff
+$global-muted = #e3e3e3
+
+$border-color = #f2f2f2
+$disabled-button-text-color = #78c097
+$background-color = #f8f8f8
+$bottom-bar-color = #f2f2f2
+$label-gray-color = #505050
+$label-background-color = #d0d0d0
+$common-border = 1px solid $border-color
+$common-border-2x = 2px solid $border-color
+
+.common-white-bg() {
+  background-color = rgb(255, 255, 255)
+}
