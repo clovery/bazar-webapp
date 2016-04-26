@@ -10,8 +10,8 @@ export default {
         if (isIOS && !isWechat)
           this.el.style.position = 'fixed'
         */
+        break
     }
-
   },
 
   update() {},

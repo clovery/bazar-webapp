@@ -1,21 +1,21 @@
 {
-  "name": "vue-demo",
+  "name": "vue-webapp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "lint": "eslint lib",
+    "lint": "eslint app",
     "build": "npm run clean && npm run lint && webpack",
     "start": "npm run build && node server.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "vue": "^1.0.17",
-    "vue-resource": "^0.7.0",
-    "vue-router": "^0.7.11",
-    "vuex": "^0.6.2"
+    "vue": "^1.0.21",
+    "vue-router": "^0.7.13",
+    "vuex": "^0.6.3",
+    "whatwg-fetch": "^0.11.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.26",

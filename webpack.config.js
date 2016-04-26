@@ -5,7 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: [
     'webpack-hot-middleware/client',
-    './lib/main'
+    './app/index'
   ],
   output: {
     filename: 'app.js',
@@ -39,11 +39,11 @@ module.exports = {
 
   resolve: {
     alias: {
-      utils: path.join(__dirname, 'lib/utils'),
-      store: path.join(__dirname, 'lib/store'),
       assets: path.join(__dirname, 'assets'),
-      components: path.join(__dirname, 'lib/common/components'),
-      directives: path.join(__dirname, 'lib/common/directives')
+      utils: path.join(__dirname, 'app/utils'),
+      store: path.join(__dirname, 'app/store'),
+      components: path.join(__dirname, 'app/common/components'),
+      directives: path.join(__dirname, 'app/common/directives')
     }
   }
 }
