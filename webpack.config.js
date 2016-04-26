@@ -45,6 +45,7 @@ module.exports = {
     alias: {
       utils: path.join(__dirname, 'app/utils'),
       store: path.join(__dirname, 'app/store'),
+      models: path.join(__dirname, 'app/models'),
       assets: path.join(__dirname, 'app/assets'),
       stylus: path.join(__dirname, 'app/assets/stylus'),
       components: path.join(__dirname, 'app/common/components'),
