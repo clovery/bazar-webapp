@@ -1,13 +1,10 @@
-# Vue-WebApp
+# Vue Web App
 
-## 安装
+## usage
 
 ```
 $ npm install
-```
-
-## 启动
-
-```
 $ npm start
 ```
+
+
