@@ -18,6 +18,7 @@
     "whatwg-fetch": "^0.11.0"
   },
   "devDependencies": {
+    "applescript": "^1.0.0",
     "babel-core": "^6.3.26",
     "babel-eslint": "^4.1.6",
     "babel-loader": "^6.2.0",

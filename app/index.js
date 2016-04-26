@@ -2,6 +2,7 @@ import './config'
 import router from './router'
 import App from './views/app.vue'
 
+import 'utils/viewport'
 
 router.start(App, '#app')
 

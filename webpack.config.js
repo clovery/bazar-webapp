@@ -17,33 +17,40 @@ module.exports = {
       { test: /\.vue$/, loader: 'vue' },
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
       { test: /\.css$/, loader: "style-loader!css-loader" },
-      { test: /\.styl$/,
-        loader: "style-loader!css-loader!stylus-loader"
-      }
+      { test: /\.styl$/, loader: "style-loader!css-loader!stylus-loader" }
     ]
   },
+
   babel: {
     presets: ['es2015', 'stage-0'],
     plugins: ['transform-runtime']
   },
+
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      title: 'bazar',
+      title: 'Vue Web App',
       filename: 'index.html',
       template: 'index.template.html',
-      favicon: path.join(__dirname, 'assets', 'images', 'favicon.ico')
+      favicon: path.join(__dirname, 'app/assets', 'images', 'favicon.ico')
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"development"'
+      }
     })
   ],
-  devtool: '#source-map',
 
   resolve: {
     alias: {
-      assets: path.join(__dirname, 'assets'),
       utils: path.join(__dirname, 'app/utils'),
       store: path.join(__dirname, 'app/store'),
+      assets: path.join(__dirname, 'app/assets'),
+      stylus: path.join(__dirname, 'app/assets/stylus'),
       components: path.join(__dirname, 'app/common/components'),
       directives: path.join(__dirname, 'app/common/directives')
     }
-  }
+  },
+
+  devtool: '#source-map'
 }
