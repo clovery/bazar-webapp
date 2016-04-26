@@ -1,10 +1,9 @@
 import VueRouter from 'vue-router'
+import routes from './routes'
 
 const router = new VueRouter()
 
-import { routes as MineRoutes } from './pages/mine'
-import { routes as HomeRoutes } from './pages/home'
-import { routes as CartRoutes } from './pages/cart'
+router.map(routes)
 
 router.beforeEach( ({ to, next }) => {
   return new Promise( resolve => {
@@ -13,7 +12,5 @@ router.beforeEach( ({ to, next }) => {
     next
   })
 })
-
-router.map(Object.assign(HomeRoutes, MineRoutes, CartRoutes))
 
 export default router

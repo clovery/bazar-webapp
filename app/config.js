@@ -5,6 +5,7 @@ import Vuex from 'vuex'
 Vue.config.debug = process.env.NODE_ENV !== 'production'
 
 Vue.use(VueRouter)
+
 Vue.use(Vuex)
 
 import stickTo from 'directives/stick-to'

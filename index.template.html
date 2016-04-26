@@ -1,11 +1,37 @@
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+<!DOCTYPE html>
+<html>
+<head>
+<title>{%=o.htmlWebpackPlugin.options.title%}</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
 {% if (o.htmlWebpackPlugin.files.favicon) { %}
 <link rel="shortcut icon" href="{%=o.htmlWebpackPlugin.files.favicon%}">
 {% } %}
-
 {% for (var css in o.htmlWebpackPlugin.files.css) { %}
 <link href="{%=o.htmlWebpackPlugin.files.css[css] %}" rel="stylesheet">
 {% } %}
+<script>
+/**
+ * @desc rem 响应式方案的实现
+ */
+!function(global) {
+  let win = global
+  let doc = win.document
+  let baseWidth = 640
+  let documentHTML = doc.documentElement
+
+  function setRootFont () {
+    let docWidth = documentHTML.getBoundingClientRect().width
+    let scale = docWidth / baseWidth
+    if (docWidth > 640)
+      scale = 0.5
+    documentHTML.style.fontSize = `${scale * 100}px`
+  }
+
+  setRootFont()
+  win.addEventListener('resize', setRootFont, false)
+}(window)
+</script>
 </head>
 <body>
 <div id="app"></div>
