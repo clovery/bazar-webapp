@@ -7,7 +7,7 @@ class User {
 
   /* get */
   find() {
-    return new Promise( (resolve) => {
+    return new Promise( () => {
       fetch(this.url)
     })
   }

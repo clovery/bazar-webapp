@@ -6,7 +6,7 @@ const hosts = {
   'default': 'http://m.prepub.xkeshi.net'
 }
 
-module.exports = function(app, host) {
+module.exports = function (app, host) {
   host = hosts[host || 'default']
 
   app.use('/api', proxy(host))

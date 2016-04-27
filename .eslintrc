@@ -33,6 +33,7 @@ rules:
   space-before-blocks: [ 2, 'always' ]
   no-warning-comments: [1, { terms: [ 'todo', 'fixme' ], location: 'anywhere' }]
   space-return-throw-case: 2
+  space-before-function-paren": [0, "never"]
   strict: 0
   vars-on-top: 2
   indent: [ 2, 2, { SwitchCase: 1 } ]
