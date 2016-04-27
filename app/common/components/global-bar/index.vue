@@ -17,10 +17,11 @@ export default {
           route: 'home'
         },
         {
-          name: '推荐',
+          name: '逛'
         },
         {
-          name: '发现',
+          name: '购物车',
+          route: 'cart'
         },
         {
           name: '我的',

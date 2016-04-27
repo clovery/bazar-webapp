@@ -13,4 +13,12 @@ router.beforeEach( ({ to, next }) => {
   })
 })
 
+
+router.afterEach( ({ to }) => {
+  let title = to.title
+
+  if (title)
+    document.title = to.title
+})
+
 export default router

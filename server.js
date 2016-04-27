@@ -1,19 +1,13 @@
-var path = require('path')
-var express = require('express')
-var webpack = require('webpack')
-var open = require('open')
-var WebpackDevServer = require('webpack-dev-server')
+const path = require('path')
+const express = require('express')
+const webpack = require('webpack')
+const open = require('open')
 
-var config = require('./webpack.config')
-var host = require('ip').address() || 'localhost'
-var port = 7080
-var app = express()
-var compiler = webpack(config)
-
-var proxy = [{
-    path: "/api/*",
-    target: "http://localhost",
-}]
+const port = process.env.port || 7080
+const app = express()
+const config = require('./webpack.config')
+const host = require('ip').address() || 'localhost'
+const compiler = webpack(config)
 
 const serverOpts = {
   quiet: true,
@@ -24,6 +18,9 @@ const serverOpts = {
   stats: {colors: true},
   publicPath: config.output.publicPath
 }
+
+/* 设置代理 */
+require('./scripts/proxy')(app, process.env.proxy)
 
 app.use(require('webpack-dev-middleware')(compiler, serverOpts))
 app.use(require('webpack-hot-middleware')(compiler))
@@ -37,7 +34,7 @@ app.listen(port, host, function (err) {
     console.error(err);
     return;
   }
-  var url = ['http://', host, ':', port ].join('');
+  const url = 'http://' + host + ':' + port
   console.log('Listening at ', url);
   open(url);
 })

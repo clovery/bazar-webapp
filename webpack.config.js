@@ -7,11 +7,13 @@ module.exports = {
     'webpack-hot-middleware/client',
     './app/index'
   ],
+
   output: {
     filename: 'app.js',
     path: path.join(__dirname, 'dist'),
     publicPath: '/assets/'
   },
+
   module: {
     loaders: [
       { test: /\.vue$/, loader: 'vue' },
@@ -19,6 +21,12 @@ module.exports = {
       { test: /\.css$/, loader: "style-loader!css-loader" },
       { test: /\.styl$/, loader: "style-loader!css-loader!stylus-loader" }
     ]
+  },
+
+  vue: {
+    loaders: {
+      js: 'babel!eslint'
+    }
   },
 
   babel: {
