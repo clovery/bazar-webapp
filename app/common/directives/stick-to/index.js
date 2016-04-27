@@ -1,6 +1,6 @@
 import './index.styl'
 
-export default {
+module.exports = {
   bind() {
     this.el.setAttribute(this.name, this.expression)
 
