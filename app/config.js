@@ -1,20 +1,21 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
 import Vuex from 'vuex'
-import { register } from 'utils/vue'
-
-Vue.config.debug = process.env.NODE_ENV !== 'production'
+import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
 Vue.use(Vuex)
 
-/*
-register('directive', [
-  'stick-to'
-])
-*/
+Vue.config.debug = process.env.NODE_ENV !== 'production'
 
-register('component', [
-  'global-bar'
-], './common')
+register('component', ['global-bar'])
+
+/*
+ * 注册 component, directive, filter
+ */
+function register(type, modules) {
+  modules.forEach( name  => {
+    let module = require(`./common/${type}s/${name}/index.js`)
+    Vue[type](name, module)
+  })
+}
