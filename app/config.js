@@ -1,12 +1,15 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
+import TinyTracker from './tiny-tracker'
 
 Vue.use(VueRouter)
 
 Vue.use(Vuex)
 
 Vue.config.debug = process.env.NODE_ENV !== 'production'
+
+TinyTracker()
 
 register('component', ['global-bar'])
 
