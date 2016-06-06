@@ -1,5 +1,5 @@
 {
-  "name": "vue-webapp",
+  "name": "vue-web-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "debug": "^2.2.0",
+    "tiny-tracker": "^1.0.0",
     "vue": "^1.0.21",
     "vue-router": "^0.7.13",
     "vuex": "^0.6.3",
